@@ -1,0 +1,17 @@
+@use "../scss/utils/index" as u;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include u.breakpoint("medium") {
+    grid-template-columns: 17.7rem 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+}
+
+.dashboard {
+  background-color: var(--background-color);
+  padding: 4rem;
+}

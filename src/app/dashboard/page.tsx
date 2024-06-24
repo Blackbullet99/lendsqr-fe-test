@@ -1,4 +1,5 @@
-import React from "react";
+import { notFound } from "next/navigation";
+import styles from "./styles.module.scss";
 
 const Dashboard = () => {
   return (

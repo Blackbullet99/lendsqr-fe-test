@@ -1,0 +1,85 @@
+@use "/src/app/scss/utils/index" as u;
+
+.navbar {
+  background-color: var(--background-color-main);
+  padding: 1rem;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search {
+    width: -webkit-fill-available;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    border: var(--secondary-color) 1px solid;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-color);
+    }
+
+    button {
+      position: absolute;
+      background-color: var(--tetiary-color);
+      padding: 0.45rem 1.5rem;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      right: 0;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    width: 40%;
+    .menu {
+      display: block;
+    }
+    .logo {
+      display: none;
+    }
+
+    @include u.breakpoint("medium") {
+      .menu {
+        display: none;
+      }
+      .logo {
+        display: block;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .right__avatar {
+      display: flex;
+      align-items: center;
+    }
+    .notification,
+    .avatar,
+    a {
+      display: none;
+    }
+
+    @include u.breakpoint("medium") {
+      .notification,
+      .avatar,
+      a {
+        display: block;
+      }
+    }
+  }
+}

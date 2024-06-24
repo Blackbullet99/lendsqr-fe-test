@@ -5,8 +5,10 @@ import Sidebar from "./ui/sidebar/sidebar";
 const Navigation = () => {
   return (
     <>
-      <Navbar />
-      <Sidebar />
+      <div>
+        <Navbar />
+        <Sidebar />
+      </div>
     </>
   );
 };
